@@ -45,19 +45,19 @@ syn keyword i7Delimiter room
 syn keyword i7Point open
 syn keyword i7Point closed
 syn keyword i7Point locked
-syn keyword i7Point unlocked 
+syn keyword i7Point unlocked
 
 
 syn region i7Comment start=/\[/ end=/\]/  contains=i7Comment
 syn region i7Heading start=/\n^\([vV]olume\|[bB]ook\|[pP]art\|[cC]hapter\|[sS]ection\)/ end=/\n\ze\n/
 syn region i7i6 start=/(-/ end=/-)/
-syn region i7Substitution start=/\[/ end=/\]/ contained 
+syn region i7Substitution start=/\[/ end=/\]/ contained
 syn region i7String start=+"+ skip=+\\\\+ end=+"+ contains=i7Substitution
 
 syn region i7VolumeFold start = /\n^[vV]olume\s/ end=/\ze\n^[vV]olume/ fold transparent contains=ALL keepend
 syn region i7BookFold start = /\n^[bB]ook\s/ end=/\ze\n^[bB]ook/ fold transparent contains=ALLBUT,i7VolumeFold keepend
 syn region i7PartFold start = /\n^[pP]art\s/ end=/\ze\n^[pP]art/ fold transparent contains=ALLBUT,i7VolumeFold,i7BookFold  keepend
-syn region i7ChapterFold start = /\n^[cC]hapter\s/ end=/\ze\n^[cC]hapter/ fold transparent contains=ALLBUT,i7VolumeFold,i7BookFold,i7PartFold keepend 
+syn region i7ChapterFold start = /\n^[cC]hapter\s/ end=/\ze\n^[cC]hapter/ fold transparent contains=ALLBUT,i7VolumeFold,i7BookFold,i7PartFold keepend
 syn region i7SectionFold start = /\n^[sS]ection\s/ end=/\ze\n^[sS]ection/ fold transparent contains=ALLBUT,i7VolumeFold,i7BookFold,i7PartFold,i7ChapterFold keepend
 
 
@@ -87,7 +87,7 @@ hi def link i7Substitution Type
 syn sync fromstart
 
 "This autocommand resyncs the folding whenever the user leaves insert
-"mode. You can remove this if performance is slow but you may have to 
+"mode. You can remove this if performance is slow but you may have to
 "manually resync now and then with :syn sync fromstart
 au InsertLeave *.ni syn sync fromstart
 
