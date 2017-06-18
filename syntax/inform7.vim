@@ -52,7 +52,7 @@ syn region i7Comment start=/\[/ end=/\]/  contains=i7Comment
 syn region i7Heading start=/\n^\([vV]olume\|[bB]ook\|[pP]art\|[cC]hapter\|[sS]ection\)/ end=/\n\ze\n/
 syn region i7i6 start=/(-/ end=/-)/
 syn region i7Substitution start=/\[/ end=/\]/ contained
-syn region i7String start=+"+ skip=+\\\\+ end=+"+ contains=i7Substitution
+syn region i7String start=+"+ skip=+\\\\+ end=+"+ contains=@Spell,i7Substitution
 
 syn region i7VolumeFold start = /\n^[vV]olume\s/ end=/\ze\n^[vV]olume/ fold transparent contains=ALL keepend
 syn region i7BookFold start = /\n^[bB]ook\s/ end=/\ze\n^[bB]ook/ fold transparent contains=ALLBUT,i7VolumeFold keepend
