@@ -48,7 +48,7 @@ syn keyword i7Point locked
 syn keyword i7Point unlocked
 
 
-syn region i7Comment start=/\[/ end=/\]/  contains=i7Comment
+syn region i7Comment start=/\[/ end=/\]/
 syn region i7Heading start=/\n^\([vV]olume\|[bB]ook\|[pP]art\|[cC]hapter\|[sS]ection\)/ end=/\n\ze\n/
 syn region i7i6 start=/(-/ end=/-)/
 syn region i7Substitution start=/\[/ end=/\]/ contained
@@ -66,23 +66,20 @@ syn match i7Punctuation /[,.;:]/
 hi def link i7Conditional Conditional
 hi def link i7Keyword Keyword
 hi def link i7Rules Special
-hi def link i7Point Underlined
+hi def link i7Point Identifier
 hi def link i7Operator Operator
-hi def link i7Delimiter Delimiter
+hi def link i7Delimiter Label
 hi def link i7Statement Statement
 hi def link i7Punctuation Constant
-hi def link i7Reserved Identifier
-hi def link i7String Constant
+hi def link i7Reserved Special
+hi def link i7String String
 hi def link i7i6 PreProc
 hi def link i7Comment Comment
-
-"isd:
-"hi def link i7Heading Todo
-"hi def link i7Substitution Label
-
-"les:
-hi def link i7Heading Statement
+hi def link i7Heading Macro
 hi def link i7Substitution Type
+hi def link i7BookFold Function
+hi def link i7VolumeFold Function
+hi def link i7PartFold Function
 
 syn sync fromstart
 
