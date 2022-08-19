@@ -83,7 +83,8 @@ syn sync fromstart
 "This autocommand resyncs the folding whenever the user leaves insert
 "mode. You can remove this if performance is slow but you may have to
 "manually resync now and then with :syn sync fromstart
-au InsertLeave *.ni, *.i7x syn sync fromstart
+au InsertLeave *.ni syn sync fromstart
+au InsertLeave *.i7x syn sync fromstart
 
 set foldmethod=syntax
 let b:current_syntax = "inform7"
