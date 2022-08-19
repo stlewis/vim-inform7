@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.ni set filetype=inform7 
+au BufNewFile,BufRead *.ni, *.i7x set filetype=inform7
